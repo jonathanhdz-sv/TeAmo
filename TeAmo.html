@@ -766,6 +766,7 @@
       position: absolute;
       top: 21%;
       right: 13%;
+      z-index: 5;
       width: 280px;
       height: 130px;
       padding: 0;
@@ -1834,9 +1835,18 @@
         height: 114px;
       }
 
-      .ocean-scene .scene__content,
-      .cloud-scene .scene__content {
+      .ocean-scene .scene__content {
         padding-top: 17vh;
+      }
+
+      .cloud-scene .scene__content {
+        padding-top: 28vh;
+        text-align: center;
+      }
+
+      .cloud-scene .scene__copy {
+        max-width: 300px;
+        margin: 0 auto;
       }
 
       .ocean-trigger {
@@ -1852,10 +1862,10 @@
       }
 
       .cloud {
-        top: 15%;
+        top: 7%;
         right: 50%;
-        width: 218px;
-        height: 105px;
+        width: 194px;
+        height: 92px;
         transform: translateX(50%);
       }
 
