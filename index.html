@@ -721,169 +721,45 @@
       text-transform: uppercase;
     }
 
-    .cloud-scene {
+    .sky-scene {
       background:
         linear-gradient(180deg, #b1d4ed 0%, #d8e8f2 56%, #f2d8c2 100%);
     }
 
-    .cloud-scene::before {
+    .sky-scene::before {
       position: absolute;
       inset: 0;
       background: linear-gradient(110deg, rgba(255, 255, 255, .33), transparent 35%, rgba(255, 209, 176, .23) 100%);
       content: '';
     }
 
-    .cloud-scene .scene__content {
+    .sky-scene .scene__content {
       align-self: start;
       padding-top: 21vh;
     }
 
-    .cloud-scene .scene__copy {
-      max-width: 370px;
+    .sky-scene .scene__copy {
+      max-width: 520px;
       color: #354b68;
     }
 
-    .cloud-scene .scene__kicker {
+    .sky-scene .scene__kicker {
       color: #a1715a;
     }
 
-    .cloud-scene h2 {
+    .sky-scene h2 {
       color: #304963;
       font-size: clamp(40px, 6.6vw, 76px);
       text-shadow: 0 2px 15px rgba(255, 255, 255, .8), 0 1px 2px rgba(255, 255, 255, .7);
     }
 
-    .cloud-scene h2 em {
+    .sky-scene h2 em {
       color: #9b6655;
     }
 
-    .cloud-scene .scene__description {
+    .sky-scene .scene__description {
       color: rgba(48, 73, 99, .72);
       text-shadow: 0 1px 8px rgba(255, 255, 255, .85);
-    }
-
-    .cloud {
-      position: absolute;
-      top: 21%;
-      right: 13%;
-      z-index: 5;
-      width: 280px;
-      height: 130px;
-      padding: 0;
-      border: 0;
-      background: transparent;
-      cursor: pointer;
-      filter: drop-shadow(0 21px 14px rgba(86, 118, 145, .15));
-      transition: transform .5s var(--ease-out), filter .5s ease;
-    }
-
-    .cloud:hover {
-      filter: drop-shadow(0 25px 17px rgba(86, 118, 145, .22));
-      transform: translateY(-7px);
-    }
-
-    .cloud__shape,
-    .cloud__shape::before,
-    .cloud__shape::after {
-      position: absolute;
-      background: linear-gradient(150deg, #fff 0%, #f7fbfc 70%, #dae8ed 100%);
-    }
-
-    .cloud__shape {
-      right: 0;
-      bottom: 17px;
-      left: 0;
-      height: 69px;
-      border-radius: 80px;
-    }
-
-    .cloud__shape::before,
-    .cloud__shape::after {
-      border-radius: 50%;
-      content: '';
-    }
-
-    .cloud__shape::before {
-      bottom: 10px;
-      left: 42px;
-      width: 108px;
-      height: 108px;
-    }
-
-    .cloud__shape::after {
-      right: 42px;
-      bottom: 0;
-      width: 91px;
-      height: 91px;
-    }
-
-    .cloud__spark {
-      position: absolute;
-      top: 1px;
-      right: 22px;
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: #fff7d5;
-      box-shadow: 0 0 18px 5px rgba(255, 226, 142, .6);
-      opacity: 0;
-      transition: opacity .6s ease;
-    }
-
-    .cloud.is-revealed .cloud__spark {
-      opacity: 1;
-      animation: twinkle 1.7s ease-in-out infinite alternate;
-    }
-
-    .cloud__label {
-      position: absolute;
-      right: 0;
-      bottom: -8px;
-      left: 0;
-      color: #718aa0;
-      font-family: 'Trebuchet MS', Arial, sans-serif;
-      font-size: 10px;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-    }
-
-    .cloud-message {
-      position: absolute;
-      top: 42%;
-      right: 12%;
-      z-index: 6;
-      max-width: 300px;
-      margin: 0;
-      padding: 18px 22px 16px;
-      border: 1px solid rgba(255, 255, 255, .58);
-      border-radius: 20px;
-      background: rgba(255, 255, 255, .34);
-      box-shadow: 0 12px 30px rgba(82, 102, 125, .14), 0 0 0 7px rgba(255, 255, 255, .12);
-      color: #304963;
-      font-size: clamp(25px, 3.3vw, 38px);
-      line-height: 1.12;
-      opacity: 0;
-      text-align: center;
-      text-shadow: 0 1px 2px rgba(255, 255, 255, .86);
-      transform: translateY(17px) rotate(2deg);
-      transition: opacity .7s ease, transform .8s var(--ease-out);
-      pointer-events: none;
-    }
-
-    .cloud-message.is-visible {
-      opacity: 1;
-      transform: translateY(0) rotate(2deg);
-    }
-
-    .cloud-message span {
-      display: block;
-      margin-top: 10px;
-      color: #785144;
-      font-family: 'Trebuchet MS', Arial, sans-serif;
-      font-size: 10px;
-      letter-spacing: .18em;
-      text-shadow: 0 1px 5px rgba(255, 255, 255, .8);
-      text-transform: uppercase;
     }
 
     .horizon {
@@ -897,7 +773,7 @@
       border: 0;
       background: linear-gradient(180deg, rgba(255, 224, 189, .04), rgba(233, 176, 141, .23));
       cursor: pointer;
-      opacity: 0;
+      opacity: 1;
       transition: opacity .6s ease, background .35s ease;
     }
 
@@ -1758,7 +1634,7 @@
       .orbit-scene h2,
       .ocean-scene h2,
       .sunset-scene h2,
-      .cloud-scene h2,
+      .sky-scene h2,
       .garden-scene h2,
       .wish-scene h2,
       .morning-scene h2,
@@ -1840,12 +1716,12 @@
         padding-top: 17vh;
       }
 
-      .cloud-scene .scene__content {
+      .sky-scene .scene__content {
         padding-top: 28vh;
         text-align: center;
       }
 
-      .cloud-scene .scene__copy {
+      .sky-scene .scene__copy {
         max-width: 300px;
         margin: 0 auto;
       }
@@ -1860,45 +1736,6 @@
 
       .ocean-trigger__label {
         top: calc(100% + 14px);
-      }
-
-      .cloud {
-        top: 7%;
-        right: 50%;
-        width: 194px;
-        height: 92px;
-        transform: translateX(50%);
-      }
-
-      .cloud:hover {
-        transform: translateX(50%) translateY(-5px);
-      }
-
-      .cloud__shape {
-        height: 58px;
-      }
-
-      .cloud__shape::before {
-        left: 31px;
-        width: 86px;
-        height: 86px;
-      }
-
-      .cloud__shape::after {
-        right: 34px;
-        width: 75px;
-        height: 75px;
-      }
-
-      .cloud-message {
-        top: 45%;
-        right: 50%;
-        width: min(280px, 80%);
-        transform: translate(50%, 17px) rotate(2deg);
-      }
-
-      .cloud-message.is-visible {
-        transform: translate(50%, 0) rotate(2deg);
       }
 
       .horizon {
@@ -2023,14 +1860,6 @@
         transform: scale(.8);
       }
 
-      .cloud {
-        top: 15%;
-        transform: scale(.82);
-      }
-
-      .cloud-message {
-        top: 38%;
-      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -2132,23 +1961,17 @@
         <p class="scene__hint">Hay belleza en cada momento contigo</p>
       </section>
 
-      <section class="scene cloud-scene" data-scene="4" aria-labelledby="cloud-title" inert>
+      <section class="scene sky-scene" data-scene="4" aria-labelledby="sky-title" inert>
         <div class="scene__content">
           <div class="scene__copy">
-            <p class="scene__kicker">Capítulo 05 · Una verdad para ti</p>
-            <h2 id="cloud-title">Crisel, guarda esto cerquita del <em>corazón.</em></h2>
-            <p class="scene__description">No importa qué tan nublado esté el día: para mí, tú sigues siendo mi persona favorita.</p>
+            <p class="scene__kicker">Capítulo 05 · El horizonte</p>
+            <h2 id="sky-title">Crisel, cuando mires lejos, recuerda que <em>siempre te elijo.</em></h2>
+            <p class="scene__description">Este cielo guarda una verdad sencilla: eres mi persona favorita y mi lugar seguro.</p>
           </div>
         </div>
-        <button class="cloud" id="cloud-trigger" type="button" aria-label="Abrir un mensaje para Crisel" aria-expanded="false">
-          <span class="cloud__shape"></span>
-          <span class="cloud__spark" aria-hidden="true"></span>
-          <span class="cloud__label">Abre mi corazón</span>
-        </button>
-        <p class="cloud-message" id="cloud-message" aria-live="polite">Crisel, eres muy importante para mí.<span>mi bebé, mi calma y mi alegría</span></p>
-        <button class="horizon" id="horizon-trigger" type="button" disabled aria-label="Llegar al campo para Crisel">
+        <button class="horizon is-ready" id="horizon-trigger" type="button" aria-label="Tocar el horizonte para continuar">
           <span class="horizon__label">Toca el horizonte para continuar</span>
-          <span class="sr-only">Llegar al campo para Crisel</span>
+          <span class="sr-only">Tocar el horizonte para continuar al siguiente capítulo</span>
         </button>
       </section>
 
@@ -2246,8 +2069,6 @@
       const stars = document.querySelector('#stars');
       const flowers = document.querySelector('#flowers');
       const petals = document.querySelector('#petals');
-      const cloud = document.querySelector('#cloud-trigger');
-      const cloudMessage = document.querySelector('#cloud-message');
       const horizon = document.querySelector('#horizon-trigger');
       const restart = document.querySelector('#restart-trigger');
       const chapterNames = ['El espacio', 'La órbita', 'El agua', 'El atardecer', 'El cielo', 'El jardín nocturno', 'El deseo', 'El amanecer', 'El umbral', 'Las flores'];
@@ -2379,14 +2200,6 @@
         }, 900);
       }
 
-      function revealCloudMessage() {
-        cloud.classList.add('is-revealed');
-        cloud.setAttribute('aria-expanded', 'true');
-        cloudMessage.classList.add('is-visible');
-        horizon.disabled = false;
-        horizon.classList.add('is-ready');
-      }
-
       [
         ['space-trigger', 1],
         ['orbit-trigger', 2],
@@ -2399,14 +2212,8 @@
       ].forEach(([id, target]) => {
         document.querySelector(`#${id}`).addEventListener('click', () => goToScene(target));
       });
-      cloud.addEventListener('click', revealCloudMessage);
       horizon.addEventListener('click', () => goToScene(5));
       restart.addEventListener('click', () => {
-        cloud.classList.remove('is-revealed');
-        cloud.setAttribute('aria-expanded', 'false');
-        cloudMessage.classList.remove('is-visible');
-        horizon.disabled = true;
-        horizon.classList.remove('is-ready');
         goToScene(0);
       });
 
